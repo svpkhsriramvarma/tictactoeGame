@@ -20,6 +20,7 @@ const winPatterns = [
 
 const resetGame = () => {
     turnO = true;
+    count = 0;
     enableBoxes();
     msgContainer.classList.add("hide");
 
@@ -40,7 +41,7 @@ boxs.forEach((box)=> {
 
         let isWinner = checkWinner();
 
-        if(count === 9 ) {
+        if(count === 9 && ! isWinner) {
             gameDraw();
         }
     });
